@@ -1,14 +1,9 @@
 #import <React/RCTBridgeModule.h>
 
-@interface RCT_EXTERN_MODULE(ReactNativeCyber, NSObject)
+@interface
+RCT_EXTERN_MODULE(ReactNativeCyber, NSObject)
 
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
-
-+ (BOOL)requiresMainQueueSetup
-{
-  return NO;
-}
+RCT_EXTERN_METHOD(makeReservation: (NSString *)cardNumber  cardVerificationCode: (NSString *)cardVerificationCode cardExpirationMonth: (NSString *)cardExpirationMonth cardExpirationYear: (NSString *)cardExpirationYear callback: (RCTResponseSenderBlock)callback)
 
 @end
+
